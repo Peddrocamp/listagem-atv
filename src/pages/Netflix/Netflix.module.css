@@ -4,25 +4,35 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    background-color: #e0f7fa; /* Fundo mais claro e alegre */
 }
 
 .netflixCard {
-    background-color: #f2f6fd;
-    border: 1px solid #464646;
+    background-color: #ffffff;
+    border: 2px solid #26a69a;
     padding: 20px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.netflixCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .netflixCard h2 {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 10px;
+    color: #00796b; /* Cor vibrante */
 }
 
 .netflixCard p {
-    font-size: 14px;
-    color: #000000;
+    font-size: 16px;
+    color: #004d40;
 }
 
+/* Estilos para a Paginação da Netflix */
 .pag {
     margin-top: 20px;
     display: flex;
@@ -31,35 +41,29 @@
 }
 
 .pagButton {
-    padding: 8px 16px;
+    padding: 10px 20px;
     margin: 0 5px;
     border: none;
-    border-radius: 4px;
-    background-color: #007bff;
+    border-radius: 50px;
+    background-color: #ff4081; /* Botão mais vibrante */
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .pagButton:hover {
-    background-color: #0056b3;
+    background-color: #f50057;
+    transform: scale(1.1);
 }
 
 .pagButton.active {
-    background-color: #0056b3;
+    background-color: #f50057;
 }
 
 .pagButton:disabled {
-    background-color: #ccc;
+    background-color: #e0e0e0;
     cursor: not-allowed;
 }
-
-@media (max-width: 992px) {
-    .ctnTitulos {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-}
-
 
 /* Estilos para a tabela de títulos da Netflix */
 .ctnTitulos {
@@ -71,55 +75,28 @@
 .ctnTitulos th,
 .ctnTitulos td {
     padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f5f5f5;
+    border: 1px solid #bbb;
+    background-color: #ffffff;
 }
 
 .ctnTitulos th {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #00796b;
+    background-color: #b2dfdb;
 }
 
 .ctnTitulos td {
-    font-size: 14px;
-    color: #666;
-}
-
-/* Estilos para a Paginação da Netflix */
-.pagination {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.paginationButton {
-    padding: 8px 16px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.paginationButton:hover {
-    background-color: #0056b3;
-}
-
-.paginationButton.active {
-    background-color: #0056b3;
-}
-
-.paginationButton:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    font-size: 16px;
+    color: #004d40;
 }
 
 /* Media Query para telas menores */
 @media (max-width: 992px) {
+    .ctnTitulos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
     .ctnTitulos th,
     .ctnTitulos td {
         padding: 15px;
